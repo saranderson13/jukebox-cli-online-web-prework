@@ -63,6 +63,12 @@ def run
       help
       puts "Please enter a command:"
       selection = gets.chomp
+      break if selection == "exit"
+    elsif selection == "list"
+      list
+      puts "Please enter a command:"
+      selection = gets.chomp
+      break if selection == "exit"
     end
   end
   exit_jukebox
