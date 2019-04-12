@@ -53,6 +53,11 @@ end
 
 def run(songs)
   # uses helper methods to run the jukebox
+  def loop_protocol
+    puts "Please enter a command:"
+    selection = gets.chomp
+    break if selection == "exit"
+  end
   
   help
   puts "Please enter a command:"
@@ -61,29 +66,19 @@ def run(songs)
   while selection != "exit"
     if selection == "help"
       help
-      puts "Please enter a command:"
-      selection = gets.chomp
-      break if selection == "exit"
+      loop_protocol
     elsif selection == "list"
       list
-      puts "Please enter a command:"
-      selection = gets.chomp
-      break if selection == "exit"
+      loop_protocol
     elsif selection == "play"
       play(songs)
-      puts "Please enter a command:"
-      selection = gets.chomp
-      break if selection == "exit"
+      loop_protocol
     else 
-      puts "Please enter a command:"
-      selection = gets.chomp
-      break if selection == "exit"
+      loop_protocol
     end
   end
   exit_jukebox
 end
-
-# run
 
 
 
