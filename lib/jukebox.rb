@@ -61,6 +61,8 @@ def run
   while selection != "exit"
     if selection == "help"
       help
+      puts "Please enter a command:"
+      selection = gets.chomp
     end
   end
   exit_jukebox
