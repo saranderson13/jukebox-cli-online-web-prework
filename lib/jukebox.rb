@@ -69,6 +69,11 @@ def run
       puts "Please enter a command:"
       selection = gets.chomp
       break if selection == "exit"
+    elsif selection == "play"
+      play(songs)
+      puts "Please enter a command:"
+      selection = gets.chomp
+      break if selection == "exit"
     end
   end
   exit_jukebox
