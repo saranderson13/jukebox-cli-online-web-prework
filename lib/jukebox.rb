@@ -51,7 +51,7 @@ def exit_jukebox
 end
 
 
-def run
+def run(songs)
   # uses helper methods to run the jukebox
   
   help
