@@ -56,7 +56,6 @@ def run(songs)
   def loop_protocol
     puts "Please enter a command:"
     selection = gets.chomp
-    break if selection == "exit"
   end
   
   help
@@ -67,14 +66,18 @@ def run(songs)
     if selection == "help"
       help
       loop_protocol
+      break if selection == "exit"
     elsif selection == "list"
       list
       loop_protocol
+      break if selection == "exit"
     elsif selection == "play"
       play(songs)
       loop_protocol
+      break if selection == "exit"
     else 
       loop_protocol
+      break if selection == "exit"
     end
   end
   exit_jukebox
